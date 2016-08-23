@@ -1,0 +1,10 @@
+<h1>Buckets</h1>
+
+<p><%= link_to 'New Bucket List', new_bucket_path %></p>
+
+<% @buckets.each do |bucket| %>
+  <h2><%= bucket.title %></h2>
+  <p><%= bucket.body %></p>
+  <%= link_to 'Show Bucket', bucket_path(bucket)%>
+<% end %>
+
