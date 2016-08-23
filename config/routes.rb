@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   root 'buckets#index'
-  resources :buckets
+  resources :buckets do
+    resources :tasks
+  end
 
 
 end

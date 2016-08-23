@@ -46,4 +46,8 @@ class BucketsController < ApplicationController
   def bucket_params
     params.require(:bucket).permit(:title, :body)
   end
+
+  def bucket
+    @bucket = Bucket.find(params[:id])
+  end
 end
