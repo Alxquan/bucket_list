@@ -2,6 +2,7 @@
 
 <p><%= link_to 'New Bucket List', new_bucket_path %></p>
 
+
 <% @buckets.each do |bucket| %>
   <h2><%= bucket.title %></h2>
   <p><%= bucket.body %></p>

@@ -21,6 +21,20 @@ class BucketsController < ApplicationController
     end
   end
 
+  def edit
+    @bucket = Bucket.find(params[:id])
+  end
+
+  def update
+    @bucket = Bucket.find(params[:id])
+
+    if @bucket.update(bucket_params)
+      redirect_to buckets_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def bucket_params
